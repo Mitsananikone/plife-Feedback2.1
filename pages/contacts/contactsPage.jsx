@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import styles from "./contactsPage.module.css";
 import { FaPhone, FaEnvelope, FaWhatsapp, FaTwitter, FaFacebook } from 'react-icons/fa';
+import Head from 'next/head';
 
 const Contacts = () => {
     const [isVisible, setIsVisible] = useState([false, false, false, false]); 
@@ -21,18 +22,18 @@ const Contacts = () => {
   }, []);
     const sectionData = [
       {
-        backgroundImage: "/images/contacts/contacts2.jpg",
+        backgroundImage: "/images/contacts/contacts2.webp",
         title: "Thailand's Premier Plastic Surgery Destination",
         description: "Thailand has long been recognized not only for its breathtaking landscapes and rich cultural heritage but also for its world-class medical facilities. In recent years, Thailand has emerged as a global hotspot for plastic surgery, offering state-of-the-art procedures at a fraction of the cost found in Western countries. With highly skilled surgeons trained in the latest techniques and equipped with cutting-edge technology, the country provides an unbeatable combination of quality and affordability. From rhinoplasty to body contouring, Thailand's plastic surgery clinics cater to a diverse clientele, ensuring personalized care and impeccable results. For those seeking transformative procedures with an added touch of luxury and privacy, there's no better destination than the Land of Smiles."
       },
         {
-          backgroundImage: "/images/contacts/contacts1.jpg",
+          backgroundImage: "/images/contacts/contacts1.webp",
           title: "Luxury Travel and Accomodations",
           description: "Embark on an unparalleled voyage of luxury as you travel from the historic heart of Berlin to the exotic realms of Thailand. Our all-inclusive package ensures a journey wrapped in opulence, starting from your first-class flight ticket, granting you panoramic aerial views and impeccable onboard services. Upon arrival, a chauffeur-driven limousine awaits to whisk you away to a 5-star resort nestled amidst Thailand's pristine beaches and verdant jungles. Enjoy gourmet meals, spa treatments, and curated local experiences, all meticulously planned to blend comfort with cultural immersion. With every detail fine-tuned to perfection, your journey between these two iconic cities promises to be as unforgettable as the destinations themselves."
         },
         
           {
-            backgroundImage: "/images/contacts/contacts3.jpg",
+            backgroundImage: "/images/contacts/contacts3.webp",
             title: "Luxury Recovery: Thailand's Post-Surgery Retreats",
             description: "After undergoing a surgical procedure, the recovery process is paramount, and Thailand offers an unparalleled experience in this regard. Nestled amidst serene landscapes, Thailand's luxury post-surgery retreats are designed to provide patients with a holistic healing environment. These havens combine state-of-the-art medical care with the comforts of a five-star resort. Imagine recuperating beside a tranquil beach, or within the embrace of lush tropical forests, with dedicated staff catering to your every need. Personalized rehabilitation programs, world-class spa treatments, and gourmet meals ensure that your recovery is not just swift, but also indulgent. It's a place where wellness meets opulence, ensuring that every patient rejuvenates both physically and mentally. In Thailand, your road to recovery is paved with luxury."
           },
@@ -65,7 +66,7 @@ const Contacts = () => {
     className="background"
     style={{
       height: '130vh', // This ensures the div is as tall as the viewport.
-      backgroundImage: "url('/images/contacts/contactsBackground.jpg')",
+      backgroundImage: "url('/images/contacts/contactsBackground.webp')",
       backgroundSize: 'cover',  // This will stretch and zoom the image to ensure it covers the whole div.
       backgroundRepeat: 'no-repeat',  // Prevents the image from repeating.
       backgroundPosition: 'center',  // Centers the background image.

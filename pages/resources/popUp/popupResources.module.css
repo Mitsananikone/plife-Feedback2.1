@@ -32,9 +32,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    background-color: transparent;
-    height: fit-content;
-    max-height: 90vh;
+    background-color: transparent !important;
+    height: 85vh;
     border: none;
     overflow: scroll;
 }
@@ -114,7 +113,7 @@
     .popupContainer {
         display: flex;
         background-color: white;
-        height: 85vh;;
+  
     }
     .popup_info {
         width: 100%; /* Let the info component take up the full width */
@@ -128,7 +127,6 @@
     .popupContainer {
         margin-top: 32px;
         display: flex;
-  
         height: 80vh;
     }
 
@@ -161,7 +159,7 @@
   @media screen and (max-width: 767px) {
 
     .popupContainer {
-        transform: translateY(35px);
+        transform: translateY(0px);
     }
     .popupContainer > span {
         font-size: 0.2rem;

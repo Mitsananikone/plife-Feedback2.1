@@ -7,6 +7,7 @@
     background: linear-gradient(-190deg, #000, #6b5b00);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
     border-bottom: 0.5px solid gold;
+    z-index: 999;
 }
 
 .navContainer {

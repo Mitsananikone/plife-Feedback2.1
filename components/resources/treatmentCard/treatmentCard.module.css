@@ -68,6 +68,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 3000ms;
     transition-duration: 3000ms;
+    background-color: transparent !important;
 }
 
 .popup {
@@ -132,6 +133,7 @@
 
     .imgContainer {
         width: auto;
+        height: 280px;
     }
 
     .tCardGroup {
@@ -220,15 +222,15 @@
 
 @media screen and (max-width: 320px) {
     .tCard {
-        margin-top: 40px;
+        margin-top: 10px;
         border: 1px solid gray;
         width: 80%;
   
     }
 
     .imgContainer {
-        height: 100%;
-        width: 80vw;
+        height: 300px;
+      
     }
 
     .tCardTitle {
@@ -242,7 +244,8 @@
 
     .imgContainer {
 
-        height: 300px;
+        height: 200px;
+        width: 80vw;
         /* Relative height according to width */
 
 

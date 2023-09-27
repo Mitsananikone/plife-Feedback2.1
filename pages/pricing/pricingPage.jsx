@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "@/pages/pricing/pricingPage.module.css";
 import Image from 'next/image';
+import Head from 'next/head';
 function SurgeryRow1(props) {
   return (
     <tr>
@@ -146,12 +147,22 @@ const PricingPage = () => {
   return (
     <div className={styles.pricingContainer}>
       <div className={styles.bannerContainer}>
+      <Head>
+        <link rel="preload" as="image" href="/images/home/home1.webp" />
+        <link rel="preload" as="image" href="/images/home/home2.webp" />
+        <link rel="preload" as="image" href="/images/home/home3.webp" />
+        <link rel="preload" as="image" href="/images/home/section1/section1Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section2/section2Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section3/section3Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section4/section4Background.webp" />
+      </Head>
         <Image
-          src="/images/pricing/pricingBanner.jpg"
+          src="/images/pricing/pricingBanner.webp"
           alt="Banner"
           width={1920} // Replace with your image's actual width
           height={1080} // Replace with your image's actual height
           className={styles.pricingBanner}
+          loading="lazy"
         />
         <h1 className={styles.pricingTitle}>PACKAGE PRICING</h1>
       </div>

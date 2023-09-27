@@ -5,6 +5,7 @@ import Link from "next/link"; // Import the Link component
 import styles from "./proceduresPage.module.css";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function ProceduresCard() {
   const titleRef = useRef(null);
@@ -29,13 +30,16 @@ export default function ProceduresCard() {
 
   return (
     <div className="background">
+       <Head>
+        <link rel="preload" as="image" href="/images/procedures/proceduresBackground.webp" />
+      </Head>
     <Image
-      src="/images/procedures/proceduresBackground.jpg"
+      src="/images/procedures/proceduresBackground.webp"
       alt="Procedures Background"
       layout="fill"
       objectFit="cover"
       quality={75}
-      priority={true}
+      loading="lazy"
     />
     
       <div className={styles.procedureComponent}>

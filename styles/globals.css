@@ -107,7 +107,7 @@ z-index: 10;
 }
 
 .custom-bullet-list li {
-  background-image: url('/images/resources/iconDot.jpg');
+  background-image: url('/images/resources/iconDot.webp');
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 40px;

@@ -80,17 +80,23 @@
 }
 
 @media screen and (max-width: 1439px) {
+    .faqBanner,.bannerContainer {
+        height: 200px;
+    }
 }
 
 @media screen and (max-width: 991px) {
+    .faqBanner,.bannerContainer {
+        height: 180px;
+    }
     .faqTitle {
         font-size: 1.8rem;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .faqBanner {
-        height: 300px;
+    .faqBanner,.bannerContainer {
+        height: 180px;
     }
     .faqTitle {
         font-size: 1.5rem;
@@ -103,8 +109,8 @@
 }
 
 @media screen and (max-width: 479px) {
-    .faqBanner {
-        height: 300px;
+    .faqBanner,.bannerContainer {
+        height: 150px;
     }
     .faqTitle {
         font-size: 1.2rem;

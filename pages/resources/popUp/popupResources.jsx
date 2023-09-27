@@ -50,7 +50,13 @@ function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
     onClose();
   };
 
-
+  const customStyles = {
+    marginBottom: '1vh',
+    borderRadius: '8px',
+    zIndex: '9999999',
+   
+  };
+  
 
 
   return (
@@ -60,6 +66,7 @@ function PopupResources({ isPopupVisible, onClose, selectedProcedure }) {
     width={90} 
     height={90} 
     measure="%"
+    customStyles={customStyles}
      >
 
       {/* <div className={styles.popup_navMenu}> */}

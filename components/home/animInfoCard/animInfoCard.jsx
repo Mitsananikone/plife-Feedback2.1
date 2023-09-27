@@ -35,7 +35,7 @@ const AnimInfoCard = ({ backgroundImage, title, body }) => (
 
 // Default props
 AnimInfoCard.defaultProps = {
-  backgroundImage: "/path/to/default-image.jpg",
+  backgroundImage: "/path/to/default-image.webp",
   title: "Default Title",
   body: "Default body text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, culpa.",
 };

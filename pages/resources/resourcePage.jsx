@@ -5,6 +5,7 @@ import TreatmentCard from "@/components/resources/treatmentCard/treatmentCard";
 import styles from "./resourcePage.module.css";
 import PopupAllSurgeries from "@/pages/resources/popUp/popupResources";
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function ResourcePage() {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -16,20 +17,21 @@ export default function ResourcePage() {
     setIsPopupVisible(true);
 };
 
-  const closePopup = () => {
-    setIsPopupVisible(false);
-  };
 
   return (
     <div className={styles.mainContainer}>
        <div className={styles.resourceContainer}>
         <div className={styles.bannerContainer}>
+        <Head>
+        <link rel="preload" as="image" href="/images/faq/faqBanner.webp" />
+      </Head>
           <Image
-            src="/images/faq/faqBanner.jpg"
+            src="/images/faq/faqBanner.webp"
             alt="Banner"
             width={1920} 
             height={1080}
             className={styles.resourceBanner}
+            loading="lazy"
           />
           <h1 className={styles.resourceTitle}>SURGERY RESOURCES</h1>
         </div>
@@ -39,25 +41,25 @@ export default function ResourcePage() {
         <div className={styles.tCardGroup1}>
           <TreatmentCard
             onClick={() => handleClick("breastImplant")}
-            imageUrl="/images/resources/breastImplant.jpg"
+            imageUrl="/images/resources/breastImplant.webp"
             description="BREAST IMPLANT"
    
           />
           <TreatmentCard
              onClick={() => handleClick("breastLift")}
-            imageUrl="/images/resources/breastLift.jpg"
+            imageUrl="/images/resources/breastLift.webp"
             description="BREAST LIFT"
         
           />
           <TreatmentCard
              onClick={() => handleClick("breastReduction")}
-            imageUrl="/images/resources/breastReduction.jpg"
+            imageUrl="/images/resources/breastReduction.webp"
             description="BREAST REDUCTION"
             
           />
           <TreatmentCard
              onClick={() => handleClick("faceLift")}
-            imageUrl="/images/resources/faceLift.jpg"
+            imageUrl="/images/resources/faceLift.webp"
             description="FACE LIFT"
            
           />
@@ -65,25 +67,25 @@ export default function ResourcePage() {
         <div className={styles.tCardGroup2}>
           <TreatmentCard
              onClick={() => handleClick("liposuction")}
-            imageUrl="/images/resources/liposuction.jpg"
+            imageUrl="/images/resources/liposuction.webp"
             description="LIPOSUCTION"
           
           />
           <TreatmentCard
              onClick={() => handleClick("trans")}
-            imageUrl="/images/resources/trans.jpg"
+            imageUrl="/images/resources/trans.webp"
             description="GENDER TRANSITION"
     
           />
           <TreatmentCard
              onClick={() => handleClick("rhinoplasty")}
-            imageUrl="/images/resources/rhinoplasty.jpg"
+            imageUrl="/images/resources/rhinoplasty.webp"
             description="RHINOPLASTY"
         
           />
           <TreatmentCard
              onClick={() => handleClick("tummyTuck")}
-            imageUrl="/images/resources/tummyTuck.jpg"
+            imageUrl="/images/resources/tummyTuck.webp"
             description="TUMMY TUCK"
      
           />

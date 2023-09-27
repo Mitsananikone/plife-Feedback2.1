@@ -3,6 +3,8 @@
 import React from "react";
 import styles from "./faqPage.module.css";
 import Image from "next/image";
+import Head from "next/head";
+
 const FAQPage = () => {
   const [visibleAnswerIndex, setVisibleAnswerIndex] = React.useState(null);
 
@@ -77,13 +79,22 @@ const FAQPage = () => {
   return (
     <div className={styles.faqContainer}>
       <div className={styles.bannerContainer}>
-
+        <Head>
+          <link
+            rel="preload"
+            as="image"
+            href="/images/faq/faqBanner.webp"
+            imagesrcset="/images/faq/faqBanner.webp" // This is optional, but can be useful for responsive images with multiple source sets.
+            imagesizes="100vw" // This is also optional, but it gives a hint about the display size.
+          />
+        </Head>
         <Image
-          src="/images/faq/faqBanner.jpg"
+          src="/images/faq/faqBanner.webp"
           alt="Banner"
           width={1920} // Replace with your image's actual width
           height={1080} // Replace with your image's actual height
           className={styles.faqBanner}
+          loading="lazy"
         />
         <h1 className={styles.faqTitle}>Frequently Asked Questions</h1>
       </div>
@@ -100,14 +111,14 @@ const FAQPage = () => {
                 {/* Arrow Down Icon */}
               </div>
               <div
-  className={
-    visibleAnswerIndex === index 
-    ? `${styles.answer} ${styles.visible}` 
-    : styles.answer
-  }
->
-  {faq.answer}
-</div>
+                className={
+                  visibleAnswerIndex === index
+                    ? `${styles.answer} ${styles.visible}`
+                    : styles.answer
+                }
+              >
+                {faq.answer}
+              </div>
             </div>
           ))}
         </div>

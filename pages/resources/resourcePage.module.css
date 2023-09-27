@@ -38,7 +38,7 @@
 .resourceContainer {
     width: 100%;
     height: calc(max-content+300px);
-    padding: 0rem;
+    
 }
 
 .resourceBanner {
@@ -52,7 +52,7 @@
     position: absolute;
     font-size: 2.5rem;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-shadow: 
       -1px -1px 3px gold, 
       1px -1px 3px gold, 
@@ -107,6 +107,7 @@
 
 
 @media screen and (min-width: 1440px) {
+    .bannerContainer, .resourceBanner
     .mainContainer{
         height: max-content;
         width: 100vw;
@@ -246,7 +247,9 @@
 }
 
 @media screen and (max-width: 479px) {
-
+    .resourceContainer, .bannerContainer {
+        height: 150px;
+    }
     .mainContainer{
         height: max-content;
         width: 100vw;
@@ -260,8 +263,8 @@
     }
 
     .procedureContainer .title {
-        margin-top: 50px;
-        font-size: x-small;
+        margin-top: 1rem;
+  
     }
 
     .bothGroups {
@@ -288,6 +291,9 @@
 
 @media screen and (max-width: 320px) {
 
+    .resourceContainer, .bannerContainer {
+        height: 150px;
+    }
     .mainContainer {
         display: flex;
         flex-direction: column;

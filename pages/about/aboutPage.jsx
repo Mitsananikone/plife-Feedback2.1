@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from "next/link";
 import styles from "./about.module.css";
 import withTransition from '@/components/hoc/withTransition';
+import Head from 'next/head';
 
 function AboutPage() {
   const containerRef = useRef(null);
@@ -48,14 +49,24 @@ function AboutPage() {
 
   return (
     <div className="background">
-    <Image
-      src="/images/about/aboutBackground.jpg"
-      alt="About Background"
-      layout="fill"
-      objectFit="cover"
-      quality={75}
-      priority={true}
+       <Head>
+    <Link
+    rel="preload" 
+    as="image" 
+      href="/images/about/aboutBackground.webp"
+      imagesrcset = "/images/about/aboutBackground.webp"
+      imageSizes="100vw"
     />
+    </Head>
+
+    <Image
+        src="/images/about/aboutBackground.webp"
+        alt="About Background"
+        layout="fill"
+        objectFit="cover"
+        quality={75}
+        loading="lazy"
+      />
 
 {/* <div className={styles.blurredBackground}></div> */}
       <div className={styles.textContainerOuter}>

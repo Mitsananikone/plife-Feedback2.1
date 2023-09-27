@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import Slick from "@/components/home/slick/slick";
 import AnimInfoCard from "@/components/home/animInfoCard/animInfoCard";
 import Image from 'next/image';
+import Head from 'next/head';
 
 // Styles import
 import styles from "./landingPage.module.css";
@@ -41,9 +42,9 @@ const FadeInSection = ({ children }) => {
 
 const Slideshow = () => {
     const images = [
-        "/images/home/home1.jpg",
-        "/images/home/home2.jpg",
-        "/images/home/home3.jpg",
+        "/images/home/home1.webp",
+        "/images/home/home2.webp",
+        "/images/home/home3.webp",
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -61,7 +62,7 @@ const Slideshow = () => {
             <div className="backgroundChange">
                 {images.map((img, index) => (
                     <div key={img} className={`backgroundChange-image ${index === currentImageIndex ? "visible" : ""}`}>
-                        <Image src={img} layout="fill" objectFit="cover" alt={`Slideshow image ${index + 1}`} />
+                        <Image src={img} layout="fill" objectFit="cover" alt={`Slideshow image ${index + 1}`} loading="lazy" />
                     </div>
                 ))}
                 <div className={styles.slickContainerHome}>
@@ -76,11 +77,19 @@ const LandingPage = () => {
   return (
     <div className={styles.landingPage}>
       <Slideshow />
-
+      <Head>
+        <link rel="preload" as="image" href="/images/home/home1.webp" />
+        <link rel="preload" as="image" href="/images/home/home2.webp" />
+        <link rel="preload" as="image" href="/images/home/home3.webp" />
+        <link rel="preload" as="image" href="/images/home/section1/section1Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section2/section2Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section3/section3Background.webp" />
+        <link rel="preload" as="image" href="/images/home/section4/section4Background.webp" />
+      </Head>
       <FadeInSection>
         <section className={styles.section} id={styles.section1}>
         <div className={styles.section_image}>
-                    <Image src="/images/home/section1/section1Background.jpg" layout="fill" objectFit="cover" alt="Section 1 Background" />
+                    <Image src="/images/home/section1/section1Background.webp" layout="fill" objectFit="cover" alt="Section 1 Background" loading="lazy"/>
                     <h2 className={styles.sectionTitle}>
                         Exclusive Plastic Surgery Packages
                     </h2>
@@ -99,7 +108,7 @@ const LandingPage = () => {
                 transition={{ delay: 0.2 }}
               >
                 <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery1.jpg"
+                  backgroundImage="/images/home/section1/surgery1.webp"
                   title="Package 1"
                   body="Experience seamless medical care with our surgery package, complete with travel arrangements and a stay in luxury accommodation, tailored just for you."
                 />
@@ -112,7 +121,7 @@ const LandingPage = () => {
                 transition={{ delay: 0.4 }}
               >
                 <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery2.jpg"
+                  backgroundImage="/images/home/section1/surgery2.webp"
                   title="Package 2"
                   body="Unlock unparalleled savings with our dual-surgery package; we handle all your travel needs and ensure your recovery in opulent accommodation."
                 />
@@ -125,7 +134,7 @@ const LandingPage = () => {
                 transition={{ delay: 0.6 }}
               >
                 <AnimInfoCard
-                  backgroundImage="/images/home/section1/surgery3.jpg"
+                  backgroundImage="/images/home/section1/surgery3.webp"
                   title="Package 3"
                   body="Embrace the pinnacle of value with our triple-surgery offer: extensive medical procedures combined with premium travel and the finest luxury lodgings, all at an unbeatable rate."
                 />
@@ -138,7 +147,7 @@ const LandingPage = () => {
       <FadeInSection>
         <section className={styles.section} id={styles.section2}>
         <div className={styles.section_image}>
-                    <Image src="/images/home/section2/section2Background.jpg" layout="fill" objectFit="cover" alt="Section 2 Background" />
+                    <Image src="/images/home/section2/section2Background.webp" layout="fill" objectFit="cover" alt="Section 2 Background" loading="lazy"/>
                 </div>
           <div className={styles.section_text}>
           <h2 className={styles.sectionTitle}>
@@ -157,7 +166,7 @@ const LandingPage = () => {
       <FadeInSection>
         <section className={styles.section} id={styles.section3}>
         <div className={styles.section_image}>
-                    <Image src="/images/home/section3/section3Background.jpg" layout="fill" objectFit="cover" alt="Section 3 Background" />
+                    <Image src="/images/home/section3/section3Background.webp" layout="fill" objectFit="cover" alt="Section 3 Background" loading="lazy"/>
                 </div>
           <div className={styles.section_text}>
           <h2 className={styles.sectionTitle}>
@@ -176,7 +185,7 @@ const LandingPage = () => {
       <FadeInSection>
         <section className={styles.section} id={styles.section4}>
         <div className={styles.section_image}>
-                    <Image src="/images/home/section4/section4Background.jpg" layout="fill" objectFit="cover" alt="Section 4 Background" />
+                    <Image src="/images/home/section4/section4Background.webp" layout="fill" objectFit="cover" alt="Section 4 Background" loading="lazy"/>
                 </div>
           <div className={styles.section_text}>
           <h2 className={styles.sectionTitle}>
