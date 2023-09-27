@@ -45,7 +45,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-position: center;
   background-size: cover;
   z-index: -9;
@@ -78,13 +78,14 @@ a {
 .appWrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: max-content;
 }
 
-.contentWrapper {
+/* .contentWrapper {
   flex: 1;
-  overflow: auto; /* In case your content exceeds the screen height */
-}
+  overflow: auto; 
+z-index: 10;
+} */
 
 
 .bounds {
@@ -156,19 +157,23 @@ a {
 }
 
 .page-enter {
+  z-index: -10;
   opacity: 0.1;
 }
 
 .page-enter-active {
+  z-index: -10;
   opacity: 1;
-  transition: opacity 400ms ease-in;
+  transition: opacity 800ms ease-in;
 }
 
 .page-exit {
+  z-index: -10;
   opacity: 1;
 }
 
 .page-exit-active {
+  z-index: -10;
   opacity: 0;
   transition: opacity 800ms ease-in;
 }

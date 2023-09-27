@@ -32,7 +32,7 @@ export default function CosmeticSurgeryCard({ onClose, onProcedureSelect, select
         onClick={() => onProcedureSelect("tummyTuck")}>TUMMY TUCK</h1>
           </div>
           <Link href="/contacts/contactsPage" passHref>
-            <button className={styles.seeMoreButton}>See More</button>
+            <button className={styles.seeMoreButton}>INQUIRE</button>
           </Link>
         </div>
 

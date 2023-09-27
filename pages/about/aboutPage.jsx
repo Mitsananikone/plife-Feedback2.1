@@ -47,7 +47,7 @@ function AboutPage() {
   }, []);
 
   return (
-    <div className="background" style={{height: '100vh', marginBottom: "0%"}}>
+    <div className="background">
     <Image
       src="/images/about/aboutBackground.jpg"
       alt="About Background"
@@ -57,6 +57,7 @@ function AboutPage() {
       priority={true}
     />
 
+{/* <div className={styles.blurredBackground}></div> */}
       <div className={styles.textContainerOuter}>
       <div className={styles.textContainer}>
         <div className={styles.textContainerBlock} ref={containerRef}>

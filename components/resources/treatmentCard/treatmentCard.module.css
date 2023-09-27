@@ -98,11 +98,12 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 15vw;;
+        width: 15vw;
     }
 
     .imgContainer {
         width: auto;
+        height: 280px;
     }
 
     .tCardGroup {

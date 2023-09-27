@@ -37,7 +37,8 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <TransitionGroup>
         <CSSTransition key={router.route} classNames="page" timeout={800}>
-          <div className="contentWrapper">
+          {/* <div className="contentWrapper"> */}
+          <div>
             <Component {...pageProps} />
           </div>
         </CSSTransition>

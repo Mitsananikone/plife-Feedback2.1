@@ -1,8 +1,7 @@
 
 .mainContainer {
-    height: auto;
+    height: 200vh;
     overflow: visible;
-    
 }
 .procedureContainer {
     margin: 0;
@@ -18,15 +17,48 @@
     padding: 1rem 1rem 0 1rem;
     overflow: visible;
     flex-grow: 1;
-    min-height: 200vh;
+    height: max-content;
 }
 
 .mainContainer,
-.procedureContainer {
+.procedureContainer,
+.resourceContainer {
     height: max-content; 
-    min-height: max-content; 
+}
+.bannerContainer {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 300px;
+    /* background: linear-gradient(-190deg, #000, #6b5b00); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+.resourceContainer {
+    width: 100%;
+    height: calc(max-content+300px);
+    padding: 0rem;
+}
+
+.resourceBanner {
+    position: relative;
+    width: 100vw;
+    object-fit: cover;
+    height: 300px;
+  }
+
+  .resourceTitle {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-shadow: 
+      -1px -1px 3px gold, 
+      1px -1px 3px gold, 
+      -1px 1px 3px gold, 
+      1px 1px 3px gold;
+}
 .popup {
     position: fixed; /* or absolute, depending on your needs */
     top: 0;
@@ -44,8 +76,15 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-align: center;
-    color: #6B7280;
-    scale: 1.7;
+    position: absolute;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-shadow: 
+      -1px -1px 3px gold, 
+      1px -1px 3px gold, 
+      -1px 1px 3px gold, 
+      1px 1px 3px gold;
 }
 
 
@@ -60,6 +99,7 @@
 }
 
 .bothGroups {
+    margin-top: 5vh;
     display: block;
     padding: 2em;
     /* Padding for the whole groups */
@@ -75,10 +115,13 @@
     .procedureContainer {
         flex-direction: column;
         padding: 2em;
-        height: max-content;
+  
         width: 100vw;
+        height: max-content;
     }
-
+    .resourceTitle {
+        font-size: 3rem;
+    }
     .tCardGroup1, .tCardGroup2 {
         display: flex;
         flex-direction: row;
@@ -103,14 +146,14 @@
 
 @media screen and (max-width: 1439px) {
     .mainContainer{
-        height: 100vh;
+        height: max-content;
         width: 100vw;
         overflow: visible;
     }
     .procedureContainer {
         flex-direction: column;
         padding: 2em;
-        height: fit-content;
+        height: max-content;
         width: 100vw;
     }
 
@@ -139,7 +182,7 @@
 
 @media screen and (max-width: 991px) {
     .mainContainer{
-        height: 300vh;
+        height: max-content;
         width: 100vw;
 
         overflow: visible;
@@ -166,7 +209,7 @@
 
 @media screen and (max-width: 767px) {
     .mainContainer{
-        height:300vh;
+        height: max-content;
         width: 100vw;
 
         overflow: visible;
@@ -205,14 +248,15 @@
 @media screen and (max-width: 479px) {
 
     .mainContainer{
-        height:100%;
+        height: max-content;
         width: 100vw;
     }
-
+    .resourceTitle {
+        font-size: 2rem;
+    }
     .procedureContainer {
         height:500vh;
         width: 100vw;
-        background-color: blue;;
     }
 
     .procedureContainer .title {
@@ -254,7 +298,9 @@
     .procedureContainerFull {
     transform: translateY(-30px);
     }
-
+    .resourceTitle {
+        font-size: 1.5rem;
+    }
     .procedureContainer {
         transform: translateY(-30px);
         height: max-content;

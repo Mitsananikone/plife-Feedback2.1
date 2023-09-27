@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "@/pages/pricing/pricingPage.module.css";
-
+import Image from 'next/image';
 function SurgeryRow1(props) {
   return (
     <tr>
@@ -145,13 +145,17 @@ const PricingPage = () => {
 
   return (
     <div className={styles.pricingContainer}>
-      <img
-        src="/images/pricing/pricingBanner.jpg"
-        alt="Banner"
-        className={styles.pricingBanner}
-      />
+      <div className={styles.bannerContainer}>
+        <Image
+          src="/images/pricing/pricingBanner.jpg"
+          alt="Banner"
+          width={1920} // Replace with your image's actual width
+          height={1080} // Replace with your image's actual height
+          className={styles.pricingBanner}
+        />
+        <h1 className={styles.pricingTitle}>PACKAGE PRICING</h1>
+      </div>
 
-      <h1 className={styles.pricingTitle}>Pricing Packages</h1>
       <div className={styles.package} id={styles.package1}>
         <h2>Package 1</h2>
         <table border="1">
@@ -169,6 +173,7 @@ const PricingPage = () => {
           </tbody>
         </table>
       </div>
+
       <div className={styles.package} id={styles.package2}>
         <h2>Package 2</h2>
         <table border="1">

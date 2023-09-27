@@ -3,21 +3,44 @@
     padding: 0rem;
 }
 
-.faqBanner {
-    width: 100vw;
+.bannerContainer {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
     height: 300px;
-    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+.faqBanner {
+    position: relative;
+    width: 100vw;
+    object-fit: cover;
+ 
+    height: 300px;
+  }
+
 .faqTitle {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 2rem;
+    position: absolute;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-shadow: 
+      -1px -1px 3px gold, 
+      1px -1px 3px gold, 
+      -1px 1px 3px gold, 
+      1px 1px 3px gold;
 }
 
 .faqContent {
     margin-inline: 2rem;
 
+}
+
+.questionAnswerContainer {
+    margin-inline: 10rem;
+    margin-bottom: 10vh;
 }
 
 .question {
@@ -32,19 +55,26 @@
 
 .answer {
     margin-top: 0.5rem;
+    margin-inline: 2rem;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    transform: translateY(-20px);  /* Pulls the content up initially */
+    transition: 
+        opacity 1s ease, 
+        max-height 1s ease, 
+        transform 1s ease;
 }
-.faqContent div:hover .answer {
+
+.visible {
     opacity: 1;
-    max-height: 200px; /* Adjust as needed */
+    max-height: max-content;  /* Adjust as needed, it should accommodate the average answer's height */
+    transform: translateY(0px);
 }
+
 /* Media Queries */
 @media screen and (min-width: 1440px) {
     .faqContainer {
-        max-width: 1200px;
         margin: auto;
     }
 }
@@ -60,16 +90,21 @@
 
 @media screen and (max-width: 767px) {
     .faqBanner {
-        height: 200px;
+        height: 300px;
     }
     .faqTitle {
         font-size: 1.5rem;
     }
+    .questionAnswerContainer {
+    margin-inline: 2rem;
+    height: max-content;
+    }
+    
 }
 
 @media screen and (max-width: 479px) {
     .faqBanner {
-        height: 150px;
+        height: 300px;
     }
     .faqTitle {
         font-size: 1.2rem;

@@ -1,35 +1,55 @@
 /* Container Styles */
 .pricingContainer {
+  width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0rem;
+    padding-bottom: 10vh;
 
   }
-  
-  /* Banner Styles */
-  .pricingBanner {
-    width: 100vw;
-    object-fit: cover;
-    margin-bottom: 2rem;
+  .bannerContainer {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
     height: 300px;
-  }
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.priceBanner {
+  position: relative;
+  width: 100vw;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  height: 300px;
   
+}
+
   /* Title Styles */
   .pricingTitle {
+    position: absolute;
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 2rem;
+    text-shadow: 
+      -1px -1px 3px gold, 
+      1px -1px 3px gold, 
+      -1px 1px 3px gold, 
+      1px 1px 3px gold;
   }
   
   /* Table Styles */
   .package {
     width: 80%;
     /* max-width: 1200px; */
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    /* margin-bottom: 2rem; */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid gray
   }
   
   .package h2 {
@@ -68,27 +88,30 @@
 
 /* Media Queries */
 @media screen and (min-width: 1440px) {
-    .pricingContainer {
-        max-width: 1200px;
+    .bannerContainer {
+        width: 100vw;
         margin: auto;
     }
+    .pricingTitle {
+      font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 1439px) {
+  .pricingTitle {
+    font-size: 3rem;
+}
 }
 
 @media screen and (max-width: 991px) {
     .pricingTitle {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .pricingBanner {
-        height: 200px;
-    }
     .pricingTitle {
-        font-size: 1rem;
+        font-size: 3rem;
     }
     .package th, .package td {
         padding: 0.2rem;  /* Adjust the padding to make cells less wide */
@@ -99,9 +122,10 @@
 }
 
 @media screen and (max-width: 479px) {
-    .pricingBanner {
-        height: 150px;
-    }
+  .bannerContainer, .priceBanner {
+    height: 200px;
+  }
+
     .package {
         height: fit-content;
     }
@@ -111,7 +135,7 @@
 
       }
     .pricingTitle {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
     .package th, .package td {
         padding: 0rem;  

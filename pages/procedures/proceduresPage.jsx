@@ -28,16 +28,16 @@ export default function ProceduresCard() {
   
 
   return (
-    <div className="background" style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+    <div className="background">
     <Image
-      src="/images/procedures/procedures.jpg"
-      alt=""
+      src="/images/procedures/proceduresBackground.jpg"
+      alt="Procedures Background"
       layout="fill"
       objectFit="cover"
-      objectPosition="center"
-      quality={100}
+      quality={75}
       priority={true}
     />
+    
       <div className={styles.procedureComponent}>
       <div ref={containerRef} className={styles.proceduresHighlight}> {/* 60% width */}
     <p className={styles.headerText}>
