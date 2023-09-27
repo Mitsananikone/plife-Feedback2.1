@@ -1,0 +1,289 @@
+
+.mainContainer {
+    height: auto;
+    overflow: visible;
+    
+}
+.procedureContainer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: #E5E7EB;
+    background: linear-gradient(to top, #929292, #E5E7EB);
+    height: auto;
+    padding: 1rem 1rem 0 1rem;
+    overflow: visible;
+    flex-grow: 1;
+    min-height: 200vh;
+}
+
+.mainContainer,
+.procedureContainer {
+    height: max-content; 
+    min-height: max-content; 
+}
+
+.popup {
+    position: fixed; /* or absolute, depending on your needs */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* adjust this value as needed */
+    /* more styles to make it visually appealing */
+  }
+
+.procedureContainer>h1 {
+    margin: 1.25rem 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #6B7280;
+    scale: 1.7;
+}
+
+
+.tCardGroup1, .tCardGroup2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.bothGroups {
+    display: block;
+    padding: 2em;
+    /* Padding for the whole groups */
+}
+
+
+@media screen and (min-width: 1440px) {
+    .mainContainer{
+        height: max-content;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+        height: max-content;
+        width: 100vw;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* Taking full width of the container */
+        height: min-content;
+        /* margin-top: 4em; */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tCardGroup1>.tCard, .tCardGroup2>.tCard {
+        flex-basis: 15%;
+        box-sizing: border-box;
+        /* To include padding and borders in the width */
+        /* You might need additional adjustments here based on padding, margins, etc. of cards */
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .mainContainer{
+        height: 100vh;
+        width: 100vw;
+        overflow: visible;
+    }
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+        height: fit-content;
+        width: 100vw;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* Taking full width of the container */
+        height: min-content;
+        /* margin-top: 4em; */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tCardGroup1>.tCard, .tCardGroup2>.tCard {
+        flex-basis: 15%;
+        box-sizing: border-box;
+        /* To include padding and borders in the width */
+        /* You might need additional adjustments here based on padding, margins, etc. of cards */
+    }
+   
+}
+
+@media screen and (max-width: 991px) {
+    .mainContainer{
+        height: 300vh;
+        width: 100vw;
+
+        overflow: visible;
+    }
+    .procedureContainer {
+        flex-direction: column;
+        padding: 2em;
+        height: 300vh;
+        width: 100vw;
+    }
+
+    .procedureContainer>h1 {
+        /* color: yellow; Using yellow as the final color. If you prefer green, change it. */
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        margin-top: 4em;
+        flex-basis: 33%;
+        flex-direction: row;
+        align-items: center;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainContainer{
+        height:300vh;
+        width: 100vw;
+
+        overflow: visible;
+    }
+
+    .procedureContainer {
+        height:500vh;
+    }
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: medium;
+
+
+    }
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    .mainContainer{
+        height:100%;
+        width: 100vw;
+    }
+
+    .procedureContainer {
+        height:500vh;
+        width: 100vw;
+        background-color: blue;;
+    }
+
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: x-small;
+    }
+
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: 500vh;
+        transform: translateY(-30px);
+    }
+    .procedureContainerFull {
+    transform: translateY(-30px);
+    }
+
+    .procedureContainer {
+        transform: translateY(-30px);
+        height: max-content;
+        width: 100vw;
+        overflow: visible;
+      
+    }
+
+    .procedureContainer .title {
+        margin-top: 50px;
+        font-size: x-small;
+    }
+
+    .bothGroups {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .procedureContainer>h1 {
+        font-size: 1em;
+    }
+
+    .tCardGroup1, .tCardGroup2 {
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+}
